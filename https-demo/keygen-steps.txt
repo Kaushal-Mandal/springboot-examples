@@ -1,0 +1,37 @@
+$ keytool -genkey -alias https-demo -storetype JKS -keyalg RSA -keysize 2048 -va                                                                                                                lidity 365 -keystore https-demo.jks
+Enter keystore password:  password
+Re-enter new password: password
+What is your first and last name?
+  [Unknown]:  Kaushal
+What is the name of your organizational unit?
+  [Unknown]:  Vikr Technologies
+What is the name of your organization?
+  [Unknown]:  Vikr Technologies
+What is the name of your City or Locality?
+  [Unknown]:  Bangalore
+What is the name of your State or Province?
+  [Unknown]:  Karnataka
+What is the two-letter country code for this unit?
+  [Unknown]:  IN
+Is CN=Kaushal, OU=Vikr Technologies, O=Vikr Technologies, L=Bangalore, ST=Karnat                                                                                                                aka, C=IN correct?
+  [no]:  yes
+
+Enter key password for <https-demo>
+        (RETURN if same as keystore password):  password
+Re-enter new password: password
+
+**** If want to show the list of keystore.
+
+$ keytool -list -keystore https-demo.jks
+Enter keystore password:  password
+
+Keystore type: JKS
+Keystore provider: SUN
+
+Your keystore contains 1 entry
+
+https-demo, 15 Sep, 2018, PrivateKeyEntry,
+Certificate fingerprint (SHA1): CB:C7:55:19:7E:70:1B:8B:27:88:C2:57:44:A4:42:6D:E9:E0:A8:69
+
+
+$ keytool -list -v -keystore https-demo.jks
